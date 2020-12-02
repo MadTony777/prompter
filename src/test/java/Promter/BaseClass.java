@@ -16,7 +16,7 @@ public class BaseClass {
     static String stagePromterV2Url = "http://esb-stage.vsk.ru:8501/cxf/rest/api/v1/prompter/AskThePrompterV2";
     static String testOisuuUrl = "http://oisuu-app-test.vsk.ru/oisuu/ws/Prompter";
     static String stageOisuuUrl = "http://oisuu-app-stage.vsk.ru/oisuu/ws/Prompter";
-    public static final String paths = "src/test/java/promter/Examples/";
+    public static final String paths = "src/test/java/Promter/Examples/";
     public static final String username = "WebUser";
     public static final String password = "WebUser";
     public static Logger log = LoggerFactory.getLogger(UnitTests.class);
