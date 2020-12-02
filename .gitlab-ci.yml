@@ -1,0 +1,12 @@
+stages:
+  - stage
+  
+Prompter-test_on_stage:
+  stage: stage
+  image: nexus.vsk.ru:8182/vsk/maven:3.6.1-jdk11
+  script:
+    - echo "Prompter tests on Test with maven..."
+    - mvn test -Dtest=UnitTests -Darg=test
+  when: manual
+  tags:
+    - docker
