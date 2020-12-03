@@ -20,7 +20,7 @@ public class Requests extends BaseClass {
         List<String> result = new ArrayList<>();
         Response response = RestAssured.given().log().all()
                 .header("Content-Type", "application/json")
-//                .auth().basic(username, password)
+                .auth().basic(username, password)
                 .headers("X-VSK-CorrelationId", cid)
                 .body(requestBody)
                 .post(getURL(environment, fileName))
