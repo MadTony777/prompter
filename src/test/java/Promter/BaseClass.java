@@ -10,15 +10,15 @@ public class BaseClass {
     private String arg = System.getProperty("arg", "stage");
     public String environment = arg;
 
-    static String testPromterUrl = "http://esb-test01.vsk.ru:8181/cxf/rest/api/v1/prompter/AskThePrompter";
-    static String stagePromterUrl = "http://esb-stage.vsk.ru:8501/cxf/rest/api/v1/prompter/AskThePrompter";
-    static String testPromterV2Url = "http://esb-test01.vsk.ru:8181/cxf/rest/api/v1/prompter/AskThePrompterV2";
-    static String stagePromterV2Url = "http://esb-stage.vsk.ru:8501/cxf/rest/api/v1/prompter/AskThePrompterV2";
-    static String testOisuuUrl = "http://oisuu-app-test.vsk.ru/oisuu/ws/Prompter";
-    static String stageOisuuUrl = "http://oisuu-app-stage.vsk.ru/oisuu/ws/Prompter";
+    private static String testPromterUrl = "http://esb-test01.vsk.ru:8181/cxf/rest/api/v1/prompter/AskThePrompter";
+    private static String stagePromterUrl = "http://esb-stage.vsk.ru:8501/cxf/rest/api/v1/prompter/AskThePrompter";
+    private static String testPromterV2Url = "http://esb-test01.vsk.ru:8181/cxf/rest/api/v1/prompter/AskThePrompterV2";
+    private static String stagePromterV2Url = "http://esb-stage.vsk.ru:8501/cxf/rest/api/v1/prompter/AskThePrompterV2";
+    private static String testOisuuUrl = "http://oisuu-app-test.vsk.ru/oisuu/ws/Prompter";
+    private static String stageOisuuUrl = "http://oisuu-app-stage.vsk.ru/oisuu/ws/Prompter";
     public static final String paths = "src/test/java/promter/Examples/";
-    public static final String username = "WebUser";
-    public static final String password = "WebUser";
+//    public static final String username = "WebUser";
+//    public static final String password = "WebUser";
     public static Logger log = LoggerFactory.getLogger(UnitTests.class);
 
 
@@ -136,9 +136,7 @@ public class BaseClass {
                         "{WebСервис.Prompter.Модуль(25)}: Не указан тип идентификатора убытка."));
                 break;
             case "AskThePrompterV2_SystemID+LossType.json":
-                assertThat(serviceResponse, containsString("org.apache.cxf.binding.soap.SoapFault: Неизвестная ошибка. {WebСервис.Prompter.Модуль(1233)}: Не указаны ни номер убытка, ни госномер ТС.\n" +
-                        "по причине:\n" +
-                        "{WebСервис.Prompter.Модуль(1233)}: Не указаны ни номер убытка, ни госномер ТС."));
+                assertThat(serviceResponse, containsString("org.apache.cxf.binding.soap.SoapFault: Неизвестная ошибка. {WebСервис.Prompter.Модуль(1349)}: Не указаны ни номер убытка, ни госномер ТС."));
         }
     }
 }

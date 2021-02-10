@@ -95,7 +95,7 @@ public class UnitTests extends Template {
         List<String> logs = testCase(environment, "AskThePrompterV2_SystemID+LossType.json");
         assertThat(logs.get(2), containsString("PrompterService: REST request  Operation 'AskThePrompterV2' was call"));
         assertThat(logs.get(2), containsString("Outbound Message"));
-        assertThat(logs.get(2), containsString("PrompterService: 'AskThePrompterV2' catch exception: org.apache.cxf.binding.soap.SoapFault: Неизвестная ошибка. {WebСервис.Prompter.Модуль(1233)}: Не указаны ни номер убытка, ни госномер ТС.\\nпо причине:\\n{WebСервис.Prompter.Модуль(1233)}: Не указаны ни номер убытка, ни госномер ТС"));
+        assertThat(logs.get(2), containsString("org.apache.cxf.binding.soap.SoapFault: Неизвестная ошибка. {WebСервис.Prompter.Модуль(1349)}: Не указаны ни номер убытка, ни госномер ТС"));
         assertThat(logs.get(2), containsString("PrompterService: REST response Operation 'AskThePrompterV2' was complete"));
         assertThat(logs.get(2), containsString("Failed delivery"));
         assertThat(logs.get(2), containsString(getURLOisuu(environment)));
